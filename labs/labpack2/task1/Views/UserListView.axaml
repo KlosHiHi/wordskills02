@@ -1,0 +1,46 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:task1.ViewModels"
+             x:DataType="vm:UserListViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="task1.Views.UserListView">
+    <DockPanel>
+        <TextBlock Text="123" DockPanel.Dock="Top"/>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <TextBlock Text="Логин" />
+			<TextBox Text="{Binding Login}" Width="100" />
+            <TextBlock Text="Пароль"/>
+			<TextBox Text="{Binding Password}" Width="100"/>
+			<Button Content="Добавить" Command="{Binding AddCommand}"/>
+        </StackPanel>
+		<ListBox ItemsSource = "{Binding Users}" Background="Moccasin">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Orientation = "Horizontal">
+                        <TextBlock Text="{Binding Login}" Margin="10"/>
+						<TextBlock Text = "{Binding Password}" Margin="10"/>
+                        <Button Content="Удалить" Command="{ReflectionBinding $parent[UserControl].DataContext.DeleteCommand}" CommandParameter="{Binding}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <DataGrid Background="BlanchedAlmond" ItemsSource="{Binding Users}"
+                  CanUserReorderColumns="True"
+                  CanUserResizeColumns="True"
+                  CanUserSortColumns="True">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Логин" Binding="{Binding Login}"/>
+				<DataGridTextColumn Header="Пароль" Binding="{Binding Password}"/>
+                <DataGridTemplateColumn>
+					<DataTemplate>
+						<DockPanel>
+							<Button Content="Удалить" Command="{ReflectionBinding $parent[UserControl].DataContext.DeleteCommand}" CommandParameter="{Binding}"/>
+                        </DockPanel>
+                    </DataTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

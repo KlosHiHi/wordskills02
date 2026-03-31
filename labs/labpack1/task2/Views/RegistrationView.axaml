@@ -1,0 +1,16 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:task2.ViewModels"
+             x:DataType="vm:RegistrationViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="task2.Views.RegistrationView">
+    <StackPanel HorizontalAlignment="Center">
+        <TextBox Text="{Binding Creditionals.Login}" Width="200" Watermark="Логин" TextInputOptions.ContentType="Name"/>
+        <TextBox Text="{Binding Creditionals.Password}" Width="200" Watermark="Пароль" TextInputOptions.ContentType="Password"/>
+        <TextBox Text="{Binding Creditionals.RepeatPassword}" Width="200" Watermark="Подтверждение пароль" TextInputOptions.ContentType="Password"/>
+        <TextBox Text="{Binding Creditionals.Email}" Width="200" Watermark="Email" TextInputOptions.ContentType="Email"/>
+        <TextBox Text="{Binding Creditionals.Phone}" Width="200" Watermark="Номер телефона" TextInputOptions.ContentType="Number"/>
+    </StackPanel>
+</UserControl>

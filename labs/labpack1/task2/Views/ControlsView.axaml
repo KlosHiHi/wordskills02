@@ -1,0 +1,74 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:task2.ViewModels"
+             x:DataType="vm:ControlViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="task2.Views.ControlsView">
+    <StackPanel>
+		 <TextBlock>
+        <Span FontSize="20" Background="GreenYellow">
+            <Italic>
+		        <Run Foreground="DarkRed" Text="пример"/>				
+            </Italic>
+            <Underline>
+				<Run Foreground="IndianRed" Text="пример"/>
+            </Underline>		    			
+        </Span>
+        <LineBreak/>
+		<Run Foreground="MediumVioletRed" Text="пример"/>
+        <Bold>
+		    <Run Foreground="PaleVioletRed" Text="пример"/>			
+        </Bold>
+        <InlineUIContainer BaselineAlignment="Baseline">
+			<Image
+                Width="32"
+                Height="32"
+                VerticalAlignment="Top"
+                Source="avares://task2/Assets/creeper.png"
+                />
+        </InlineUIContainer>
+    </TextBlock>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+            <TextBox Watermark="Логин"  Margin="5" Width="150" TextInputOptions.ContentType="Name"/>
+            <TextBox Watermark="Пароль" PasswordChar="*" Margin="5" Width="150" TextInputOptions.ContentType="Password"/>
+            <TextBox Watermark="Email" Margin="5" Width="150" TextInputOptions.ContentType="Email">
+            </TextBox>
+            <TextBox Watermark="Числовой код"  Margin="5" Width="150" TextInputOptions.ContentType="Number"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <CheckBox/> 
+            <TextBlock Text="принять условия" VerticalAlignment="Center"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <RadioButton GroupName="Sex"/>
+                <RadioButton GroupName="Sex"/>
+                <RadioButton GroupName="Confirm"/>
+                <RadioButton GroupName="Confirm"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <CalendarDatePicker SelectedDate="{Binding SelectedDate}"/>
+                <TextBlock Text="{Binding Age}"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <ComboBox ItemsSource="{Binding Languages}" SelectedItem="{Binding SelectedLanguage}"/>
+                <TextBlock Text="{Binding SelectedLanguage}" VerticalAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Slider Width="100" Value="{Binding Opacity}" Maximum="1" Minimum="0"/>
+                <Rectangle Height="40" Width="40" Fill="Red" Opacity="{Binding Opacity}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <ToggleSwitch OnContent="Включено" OffContent="Выключено"/>
+            </StackPanel>
+                
+        </StackPanel>
+    </StackPanel>
+   
+
+    
+</UserControl>
