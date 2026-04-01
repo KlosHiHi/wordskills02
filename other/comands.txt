@@ -1,3 +1,8 @@
 dotnet run
 dotnet build
 dotnet add package CommunityToolkit.Mvvm
+
+dotnet run --no-restore (запуск без рестора)
+dotnet new list (список шаблонов) 
+dotnet new avalonia.window -n Имя -o Путь
+dotnet ef dbcontext scaffold (еф коре)

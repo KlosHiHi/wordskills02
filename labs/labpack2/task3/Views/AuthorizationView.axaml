@@ -1,0 +1,22 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="using:task3"
+             xmlns:vm="using:task3.ViewModels"
+             x:DataType="vm:AuthorizationViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="task3.Views.AuthorizationView">
+    <UserControl.Resources>
+        <local:CelsiusToFarenhateConverter x:Key="CelciusToFarenhate"/>
+    </UserControl.Resources>
+
+    <StackPanel HorizontalAlignment="Center">
+        <TextBox Text="{Binding Login}" Margin="5" Width="200" Watermark="Логин" TextInputOptions.ContentType="Name"/>
+        <TextBlock Text="{Binding Celcius, Converter={StaticResource CelciusToFarenhate}}" Margin="5" Width="200"/>
+        
+        <TextBox Margin="5"  Width="200" Watermark="Пароль" TextInputOptions.ContentType="Password"/>
+        <Button Command="{Binding CheckLoginCommand}" Margin="5" Content="Войти" Width="200" HorizontalContentAlignment="Center"/>
+        <Button Command="{Binding RegPageCommand}" Margin="5" Content="Зарегистрироваться" Width="200" HorizontalContentAlignment="Center"/>
+    </StackPanel>
+</UserControl>
