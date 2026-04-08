@@ -1,0 +1,37 @@
+VS Code extensions:
+.NET Install Tool
+Avalonia for VSCode Community
+C#
+C# Dev Kit
+C# Extensions
+Code Runne
+Color Highlight
+Image preview
+indent-rainbow
+IntelliCode for C# Dev Kit
+
+Nuget-packages:
+Avalonia
+Avalonia.Desktop
+Avalonia.Diagnostics
+Avalonia.Fonts.Inter
+Avalonia.Thees.Fluent
+
+CommunityToolkit.Mvvm
+Microsoft.Extensions.DependencyInjection
+
+BCrypt.Net-Next
+Microsoft.AspNetCore.OpenApi
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+Scalar.AspNetCore
+
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.EntityFrameworkCore.Design
+MySql.EntityFrameworkCore
+
+Additional tools:
+Avalonia.Templates (для dotnet)
+dotnet-aspnet-codegenerator
+dotnet-ef
