@@ -1,8 +1,15 @@
-﻿namespace ClassLibrary.Models;
+﻿using System;
+using System.Collections.Generic;
 
-public class User
+namespace ClassLibrary.Models;
+
+public partial class User
 {
-    public string UserId;
-    public string Login;
-    public string Password;
+    public int UserId { get; set; }
+
+    public string? Login { get; set; }
+
+    public string? Password { get; set; }
+
+    public string? RoleId { get; set; }
 }

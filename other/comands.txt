@@ -6,3 +6,8 @@ dotnet run --no-restore (запуск без рестора)
 dotnet new list (список шаблонов) 
 dotnet new avalonia.window -n Имя -o Путь
 dotnet ef dbcontext scaffold (еф коре)
+
+
+dotnet aspnet-codegenerator razorpage -m Модель -dc Контекст -outDir Pages/***
+dotnet aspnet-codegenerator controller -m Модель -dc Контекст -name Имя -outDir Controllers -api
+dotnet ef dbcontext scaffold "Строка подключения" MySql.EntityFrameworkCore -o Models --context-dir Contexts -c Контекст -t Таблица

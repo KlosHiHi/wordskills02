@@ -4,34 +4,41 @@ Avalonia for VSCode Community
 C#
 C# Dev Kit
 C# Extensions
-Code Runne
-Color Highlight
-Image preview
-indent-rainbow
-IntelliCode for C# Dev Kit
+IntelliCode for C# Dev Kit 
+Code Runne - запуск фрагментов кода для тестирования
+Color Highlight - показывает цвет в коде по HEX и др.
+Image preview - превью изображений в коде
+indent-rainbow - разноцветная табуляция
 
 Nuget-packages:
+--для авалонии--
 Avalonia
 Avalonia.Desktop
 Avalonia.Diagnostics
 Avalonia.Fonts.Inter
 Avalonia.Thees.Fluent
+LiveChartsCore.SkiaSharpView.Avalonia - диаграммы
+CommunityToolkit.Mvvm - помощник для создания архитектуры MVVM
+MessageBox.Avalonia - диалоговые сообщения
+--
 
-CommunityToolkit.Mvvm
+CsvHelper - для более простого экспорта CSV
+EPPlus - для экспорта в Excel
+BCrypt.Net-Next - Хеширование
+Microsoft.VisualStudio.Web.CodeGeneration.Design - кого генератор
+Scalar.AspNetCore - графическое представление API
 Microsoft.Extensions.DependencyInjection
-
-BCrypt.Net-Next
 Microsoft.AspNetCore.OpenApi
-Microsoft.VisualStudio.Web.CodeGeneration.Design
-Scalar.AspNetCore
 
+--для работы с БД--
 Microsoft.EntityFrameworkCore
 Microsoft.EntityFrameworkCore.SqlServer
 Microsoft.EntityFrameworkCore.Tools
 Microsoft.EntityFrameworkCore.Design
 MySql.EntityFrameworkCore
+--
 
 Additional tools:
-Avalonia.Templates (для dotnet)
-dotnet-aspnet-codegenerator
-dotnet-ef
+Avalonia.Templates - для dotnet шаблоны объектов авалонии
+dotnet-aspnet-codegenerator - кодогенератор .NET ASP
+dotnet-ef - кодогенератор Scaffold

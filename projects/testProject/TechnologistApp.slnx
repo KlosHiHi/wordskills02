@@ -1,7 +1,0 @@
-<Solution>
-  <Project Path="ClassLibrary/ClassLibrary.csproj" />
-  <Project Path="LogisticianApp/LogisticianApp.csproj" />
-  <Project Path="OperatorWebApp/OperatorWebApp.csproj" />
-  <Project Path="TechnologistApp/TechnologistApp.csproj" />
-  <Project Path="WebApi/WebApi.csproj" />
-</Solution>
