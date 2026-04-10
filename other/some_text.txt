@@ -1,0 +1,8 @@
+CREATE DEFINER = CURRENT_USER TRIGGER `vlasovv`.`products_BEFORE_DELETE` BEFORE DELETE ON `products` FOR EACH ROW
+BEGIN
+	INSERT INTO products_archive (id, `name`, `type`, `status_id`)
+    VALUES (OLD.id, OLD.`name`, OLD.`type`, OLD.staus_id);
+END
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJdGikMFg+d28KG6wqvqJQ7pRhRKvn2S/5Xto9zewe5T u0109@0109-18
+
