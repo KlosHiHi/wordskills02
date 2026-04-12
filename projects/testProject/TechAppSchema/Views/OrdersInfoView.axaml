@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:TechAppSchema.ViewModels"
+             x:DataType="vm:OrdersInfoViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TechAppSchema.Views.OrdersInfoView">
+  <DockPanel Background="Purple">
+    <DockPanel Margin="5" DockPanel.Dock="Top">
+      <Button Content="Сформировать заказ"/>
+    </DockPanel>
+    <DataGrid ItemsSource="{Binding Orders}" IsReadOnly="True" SelectedItem="{Binding SelectedOrder}">      
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*"/>
+        <DataGridTextColumn Header="Продукция" Binding="{Binding Product.Name}" Width="*"/>
+        <DataGridTextColumn Header="Дата создания" Binding="{Binding CreationTime}" Width="*"/>
+        <DataGridTextColumn Header="Номер линии" Binding="{Binding LineNumber}" Width="*"/>
+        <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="*"/>
+        
+      </DataGrid.Columns>
+    </DataGrid>
+  </DockPanel>
+</UserControl>
