@@ -17,7 +17,7 @@
     <DockPanel DockPanel.Dock="Left" Width="200" Background="SkyBlue">
       <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Главная" FontSize="18" VerticalAlignment="Center"/>
       <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Продукция" FontSize="18" VerticalAlignment="Center"/>
-      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Рецептуры" FontSize="18" VerticalAlignment="Center"/>
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Command="{Binding ToFormsPageCommand}" Content="Рецептуры" FontSize="18" VerticalAlignment="Center"/>
       <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Техкарты" FontSize="18" VerticalAlignment="Center"/>
       <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Command="{Binding ToOrderPageCommand}" Content="Заказы" FontSize="18" VerticalAlignment="Center"/>
       <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Партии" FontSize="18" VerticalAlignment="Center"/>

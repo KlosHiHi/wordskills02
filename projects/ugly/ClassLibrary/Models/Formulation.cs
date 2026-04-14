@@ -14,6 +14,7 @@ public partial class Formulation
     public string? Status { get; set; }
 
     public sbyte? IsCurrent { get; set; }
+    public sbyte? IsDeleted { get; set; }
 
     public virtual ICollection<FormulationItem> FormulationItems { get; set; } = new List<FormulationItem>();
 

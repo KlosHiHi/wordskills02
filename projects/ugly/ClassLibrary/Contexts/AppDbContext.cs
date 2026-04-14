@@ -46,6 +46,9 @@ public partial class AppDbContext : DbContext
             entity.Property(e => e.IsCurrent)
                 .HasDefaultValueSql("'0'")
                 .HasColumnName("is_current");
+            entity.Property(e => e.IsDeleted)
+                .HasDefaultValueSql("'0'")
+                .HasColumnName("is_deleted");
             entity.Property(e => e.Name)
                 .HasMaxLength(45)
                 .HasColumnName("name");

@@ -1,0 +1,47 @@
+@page
+@model WebApp1.Pages.FormulationItems.IndexModel
+
+@{
+    ViewData["Title"] = "FormulationUtems";
+}
+
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FormulationItem[0].Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormulationItem[0].Formulation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FormulationItem[0].Item)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.FormulationItem) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Formulation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item.Id)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

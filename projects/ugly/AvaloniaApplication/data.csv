@@ -1,7 +1,0 @@
-id;product_id;name;status;is_current
-1;f1;p1;222;ClassLibrary.Models.Formulation
-2;f2;p1;qwe;ClassLibrary.Models.Formulation
-3;f3;p1;q;ClassLibrary.Models.Formulation
-4;f4;p2;q;ClassLibrary.Models.Formulation
-5;f5;p2;555;ClassLibrary.Models.Formulation
-6;f6;p3;q;ClassLibrary.Models.Formulation

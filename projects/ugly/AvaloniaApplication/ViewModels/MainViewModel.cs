@@ -29,4 +29,11 @@ public partial class MainViewModel : ViewModelBase
     {
         Content = new EventViewModel();
     }
+
+    
+    [RelayCommand]
+    private void ToFormsPage()
+    {
+        Content = new FormulationsViewModel();
+    }
 }
