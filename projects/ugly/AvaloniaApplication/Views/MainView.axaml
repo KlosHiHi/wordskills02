@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:AvaloniaApplication.ViewModels"
+             x:DataType="vm:MainViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaApplication.Views.MainView">
+  <DockPanel>
+    <DockPanel Background="CadetBlue" DockPanel.Dock="Top" Height="50">
+      <TextBlock Text="Логин" TextAlignment="Center" VerticalAlignment="Center" DockPanel.Dock="Right" FontSize="20" Margin="5"/>
+      <Button Content="🔔" DockPanel.Dock="Right" Margin="5" Width="35" Height="35" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+      <Image Height="50" Stretch="UniformToFill" Width="50" Margin="5"/>
+      <TextBlock Text="{Binding Title}" Width="150" Margin="5" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+      <TextBox Margin="5" Width="450" VerticalContentAlignment="Center"/>
+    </DockPanel>
+    <DockPanel DockPanel.Dock="Left" Width="200" Background="SkyBlue">
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Главная" FontSize="18" VerticalAlignment="Center"/>
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Продукция" FontSize="18" VerticalAlignment="Center"/>
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Рецептуры" FontSize="18" VerticalAlignment="Center"/>
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Техкарты" FontSize="18" VerticalAlignment="Center"/>
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Command="{Binding ToOrderPageCommand}" Content="Заказы" FontSize="18" VerticalAlignment="Center"/>
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Партии" FontSize="18" VerticalAlignment="Center"/>
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Command="{Binding ToExtruderPageCommand}" Content="Экструдер" FontSize="18" VerticalAlignment="Center"/>
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Command="{Binding ToEventPageCommand}" Content="События" FontSize="18" VerticalAlignment="Center"/>
+      <Button DockPanel.Dock="Top" Background="Transparent" Margin="5" Click="Button_Click" Content="Отчёты" FontSize="18" VerticalAlignment="Center"/>
+      <TextBlock Margin="5" FontSize="18" VerticalAlignment="Center"/>
+    </DockPanel>
+    <ContentControl Content="{Binding Content}"/>
+  </DockPanel>
+</UserControl>

@@ -1,0 +1,22 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:AvaloniaApplication.ViewModels"
+             x:DataType="vm:EventViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaApplication.Views.EventView"> 
+  <DockPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+    <DataGrid ItemsSource="{Binding Formulations}" DockPanel.Dock="Top">
+      <DataGrid.Columns>
+        <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="*"/>
+        <DataGridTextColumn Header="Имя" Binding="{Binding Name}" Width="*"/>
+        <DataGridTextColumn Header="Продукт" Binding="{Binding Product.Name}" Width="*"/>
+        <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="*"/>
+        <DataGridTextColumn Header="Текущий" Binding="{Binding IsCurrent}" Width="*"/>
+      </DataGrid.Columns>
+    </DataGrid>
+    <Button Content="Запрос даных" Command="{Binding GetDataCommand}"/>
+    <Button Content="Экспорт" Command="{Binding ExportDataCommand}"/>
+  </DockPanel>
+</UserControl>

@@ -1,0 +1,33 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:AvaloniaApplication.ViewModels"
+             x:DataType="vm:EditOrderViewModel"
+             mc:Ignorable="d" 
+             x:Class="AvaloniaApplication.Views.EditOrderView">
+  <DockPanel>
+    <DockPanel DockPanel.Dock="Top">
+      <TextBlock Text="№" TextAlignment="Center" FontSize="20" Margin="5" VerticalAlignment="Center"/>
+      <TextBlock Text="{Binding Order.Id}" TextAlignment="Center" FontSize="20" Margin="5" VerticalAlignment="Center"/>
+      <TextBlock Text="Продукт: " TextAlignment="Center" FontSize="20" Margin="5" VerticalAlignment="Center"/>
+      <ComboBox ItemsSource="{Binding Products}" SelectedValue="{Binding Order.Product.Name}"  Margin="5" VerticalAlignment="Center"  Width="120"/>
+      <TextBlock Text="Объём: " TextAlignment="Center" FontSize="20" Margin="5" VerticalAlignment="Center"/>
+      <TextBox Text="{Binding Order.Weight}" TextAlignment="Center" FontSize="20" Margin="5" VerticalAlignment="Center"  Width="120"/>
+      <ComboBox ItemsSource="{Binding WeigthTypes}" SelectedValue="{Binding Order.WeightType}" Margin="5" VerticalAlignment="Center"  Width="120"/>
+      <TextBlock Text="Линия производства: " TextAlignment="Center" FontSize="20" Margin="5" VerticalAlignment="Center"/>
+      <ComboBox ItemsSource="{Binding Lines}" SelectedValue="{Binding Order.LineNumber}" Margin="5"/>
+      <TextBlock Text="{Binding Order.CreationTime, StringFormat='{}{0:dd-MM-yyyy HH:mm}'}" TextAlignment="Center" FontSize="20" Margin="5" VerticalAlignment="Center"/>
+      <TextBlock Text="{Binding Order.Status}" TextAlignment="Center" FontSize="20" Margin="5" VerticalAlignment="Center"/>
+      <Button x:Name="SuccessButton" Content="✔️" Width="55" Height="55" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="20" Margin="2"/>
+              
+      <TextBlock/>
+    </DockPanel>
+    <DockPanel DockPanel.Dock="Top">
+      <TextBlock/>
+    </DockPanel>
+    <DockPanel>
+      
+    </DockPanel>
+  </DockPanel>    
+</UserControl>
