@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Иван Иванов",
+    "email": "ivan@example.com",
+    "role": "admin",
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "name": "Петр Петров",
+    "email": "petr@example.com",
+    "role": "user",
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "name": "Алексей Сидоров",
+    "email": "alex@example.com",
+    "role": "user",
+    "is_active": false
+  }
+]
